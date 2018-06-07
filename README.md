@@ -31,7 +31,7 @@ Attacker could trick user to run downloaded `.applescript` file and execute any 
 
 13. Script Editor runs our `exploit.applescript`.
 
-Problems:
+### Problems
 
 - User should allow `applescript:` open Script Editor by default.
 
