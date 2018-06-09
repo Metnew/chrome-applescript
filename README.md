@@ -1,5 +1,7 @@
 # Execute AppleScript using Chrome
 
+<img src="https://cdn-images-1.medium.com/max/2000/1*6Jfk39Vt7fEuhpMMo9TCBw.gif" />
+
 #### [Original post on Medium](https://medium.com/@vladimirmetnew/i-give-you-a-working-exploit-for-stable-chrome-on-mac-8ac49af40910)
 
 Attacker could trick user to run downloaded `.applescript` file and execute any code in "Script Editor" app with user-level privileges.
