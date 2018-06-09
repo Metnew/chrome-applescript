@@ -1,6 +1,10 @@
 # Execute AppleScript using Chrome
 
+#### [Original post on Medium](https://medium.com/@vladimirmetnew/i-give-you-a-working-exploit-for-stable-chrome-on-mac-8ac49af40910)
+
 Attacker could trick user to run downloaded `.applescript` file and execute any code in "Script Editor" app with user-level privileges.
+
+Chromium tracker: https://bugs.chromium.org/p/chromium/issues/detail?id=850261
 
 ## Attack scenario
 
@@ -25,7 +29,7 @@ Attacker could trick user to run downloaded `.applescript` file and execute any 
 10. At this point, we have Script Editor with exploit inside (moreover, user didn't see this window) and focused `exploit.html` in Chrome.
 
 11. Now we need to trick user into pressing Cmd + R while navigating to `applescript:` url.
-    It could be possible with a technique similar to https://bugs.chromium.org/p/chromium/issues/detail?id=252888, when user starts pressing specific keys in browser, but they get evaluated in non-browser windows
+    It could be possible with a technique similar to https://bugs.chromium.org/p/chromium/issues/detail?id=637098, when user starts pressing specific keys in browser, but they get evaluated in non-browser windows
 
 12. At this point, user has to press Cmd and then press R. on Cmd keypress, we open `applescript:` url. Script Editor becomes focused, keypress for Cmd is interpreted as keypress on Script Editor and keydown for R will run Script Editor's shortcut "Cmd+R", e.g. "Run". (in attached exploit it's required to press CMD and hit "R" twice)
 
